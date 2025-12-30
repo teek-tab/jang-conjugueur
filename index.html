@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conjugueur Pular - JANG</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <div class="header">
+      <div class="header-top">
+        <div class="logo">🧠JANG</div>
+        <nav>
+          <a href="liste-verbes.html" class="nav-btn">📋 Liste des verbes</a>
+        </nav>
+      </div>
+      <p>Conjugueur gratuit de verbes en Pular</p>
+    </div>
+
+    <!-- Bannière image -->
+    <div class="hero-banner">
+      <p>Bienvenue sur JANG, le conjugueur gratuit de verbes en Pular. Entrez un verbe à l'infinitif, choisissez le temps et le mode, puis cliquez sur "Conjuguer" pour voir toutes les formes conjuguées.</p>
+    </div>
+
+    <!-- Formulaire principal -->
+    <div class="card">
+      <div class="form-line">
+        <div class="form-group">
+          <label class="form-label" for="verbe">L'infinitif</label>
+          <input type="text" id="verbe" class="form-input" placeholder="Ex: windugol">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="temps">Temps</label>
+          <select id="temps" class="form-select">
+            <option value="present">Présent</option>
+            <option value="continu">Présent continu</option>
+            <option value="passecompose">Passé composé</option>
+            <option value="passesimple">Passé simple</option>
+            <option value="imparfait">Imparfait</option>
+            <option value="plusque">Plus-que-parfait</option>
+            <option value="futurproche">Futur proche</option>
+            <option value="futursimple">Futur simple</option>
+            <option value="futurcont">Futur continu</option>
+            <option value="futurante">Futur antérieur</option>
+            <option value="condpresent">Conditionnel présent</option>
+            <option value="condforme1">Conditionnel forme 1</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-line">
+        <div class="form-group">
+          <label class="form-label" for="mode">Mode</label>
+          <select id="mode" class="form-select">
+            <option value="aff">Affirmatif</option>
+            <option value="neg">Négatif</option>
+            <option value="int">Interrogatif</option>
+          </select>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="allTemps">
+          <label for="allTemps">Tous les temps</label>
+        </div>
+      </div>
+
+      <button class="btn-conjugate" onclick="conjuguer()">Conjuguer</button>
+    </div>
+
+    <!-- Résultats -->
+    <div class="card results-card" id="resultsCard">
+      <div class="conjugation-grid" id="conjugationList"></div>
+      <div class="note" id="note"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer-container"></footer>
+
+  <!-- Scripts -->
+  <script src="verbes.js"></script>
+  <script src="main.js"></script>
+  <script src="footer.js"></script>
+</body>
+</html>

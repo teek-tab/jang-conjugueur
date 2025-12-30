@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liste des Verbes Pular - JANG</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <a href="index.html" class="back-link">⬅️</a>
+    
+    <div class="card">
+      <!-- Barre de recherche -->
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Rechercher un verbe à l'infinitif...">
+        <div id="suggestions"></div>
+      </div>
+
+      <!-- Filtre alphabétique -->
+      <div class="alpha-filter" id="alphaFilter"></div>
+
+      <!-- Tableau des verbes -->
+      <div class="verbs-table-container">
+        <table class="verbs-table" id="verbsTable">
+          <thead>
+            <tr>
+              <th>Verbe (infinitif)</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="verbsBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer-container"></footer>
+
+  <!-- Scripts -->
+  <script src="verbes.js"></script>
+  <script>
+    // Initialisation de la liste des verbes
+    document.addEventListener('DOMContentLoaded', function() {
+      const tableBody = document.getElementById("verbsBody");
+      const searchInput = document.getElementById("searchInput");
+      const suggestions = document.getElementById("suggestions");
+      const alphaFilter = document.getElementById("alphaFilter");
+
+      // Trier les verbes
+      verbes.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+
+      // Générer les lettres
+      function genererLettres() {
+        const lettresSet = new Set();
+        verbes.forEach(v => {
+          const premiere = v.charAt(0).toUpperCase();
+          if (/[A-ZƊƁŊ]/.test(premiere)) lettresSet.add(premiere);
+        });
+        const lettres = Array.from(lettresSet).sort();
+
+        alphaFilter.innerHTML = '<button class="alpha-btn active" data-letter="all">Tous</button>';
+        lettres.forEach(l => {
+          const btn = document.createElement("button");
+          btn.className = "alpha-btn";
+          btn.textContent = l;
+          btn.dataset.letter = l;
+          alphaFilter.appendChild(btn);
+        });
+
+        alphaFilter.addEventListener("click", e => {
+          if (e.target.classList.contains("alpha-btn")) {
+            document.querySelectorAll(".alpha-btn").forEach(b => b.classList.remove("active"));
+            e.target.classList.add("active");
+            filtrerVerbes();
+          }
+        });
+      }
+
+      // Afficher verbes
+      function afficherVerbes(liste) {
+        tableBody.innerHTML = "";
+        liste.forEach(verbe => {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td><strong>${verbe}</strong></td>
+            <td><button class="conjugate-btn" data-verbe="${verbe}">Conjuguer</button></td>
+          `;
+          tableBody.appendChild(tr);
+        });
+
+        document.querySelectorAll(".conjugate-btn").forEach(btn => {
+          btn.addEventListener("click", () => {
+            const verbe = btn.dataset.verbe;
+            localStorage.setItem("verbeAConjuguer", verbe);
+            localStorage.setItem("modeConjugaison", "aff");
+            localStorage.setItem("tousLesTemps", "true");
+            window.location.href = "index.html";
+          });
+        });
+      }
+
+      // Filtrer verbes
+      function filtrerVerbes() {
+        const terme = searchInput.value.toLowerCase();
+        const lettreActive = document.querySelector(".alpha-btn.active").dataset.letter;
+        let filtrés = verbes.filter(v => v.toLowerCase().includes(terme));
+
+        if (lettreActive !== "all") {
+          filtrés = filtrés.filter(v => v.charAt(0).toUpperCase() === lettreActive);
+        }
+        afficherVerbes(filtrés);
+      }
+
+      // Suggestions
+      searchInput.addEventListener("input", () => {
+        const terme = searchInput.value.toLowerCase();
+        suggestions.innerHTML = "";
+        suggestions.style.display = "none";
+
+        if (terme.length === 0) return;
+
+        const matches = verbes.filter(v => v.toLowerCase().includes(terme)).slice(0, 8);
+
+        if (matches.length > 0) {
+          matches.forEach(v => {
+            const div = document.createElement("div");
+            div.className = "suggestion-item";
+            div.textContent = v;
+            div.addEventListener("click", () => {
+              searchInput.value = v;
+              suggestions.style.display = "none";
+              filtrerVerbes();
+            });
+            suggestions.appendChild(div);
+          });
+          suggestions.style.display = "block";
+        }
+      });
+
+      // Cacher suggestions
+      document.addEventListener("click", e => {
+        if (!searchInput.contains(e.target) && !suggestions.contains(e.target)) {
+          suggestions.style.display = "none";
+        }
+      });
+
+      // Initialiser
+      genererLettres();
+      afficherVerbes(verbes);
+    });
+  </script>
+  <script src="footer.js"></script>
+</body>
+</html>

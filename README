@@ -1,0 +1,164 @@
+```markdown
+# 🧠 JANG - Conjugueur Pular
+
+[![GitHub](https://img.shields.io/badge/GitHub-Open--Source-blue?logo=github)](https://github.com/teek-tab/jang-conjugueur)
+[![Licence](https://img.shields.io/badge/Licence-AGPL--3.0-blue)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-En%20développement-orange)]()
+[![Langue](https://img.shields.io/badge/Langue-Pular-yellow)](https://fr.wikipedia.org/wiki/Peul)
+
+**JANG** est un conjugueur open source et gratuit pour la langue **Pular** (peul), développé par un étudiant en informatique passionné de linguistique. Ce projet vise à documenter et préserver une langue africaine sous-documentée.
+
+## 🌍 Pourquoi ce projet ?
+
+Le Pular est parlé par plus de **40 millions de personnes** en Afrique de l'Ouest, mais ses ressources numériques sont très limitées. JANG comble ce manque en offrant :
+
+- Un conjugueur complet et gratuit
+- Une documentation linguistique accessible
+- Un outil éducatif pour étudiants et enseignants
+- Un projet communautaire ouvert aux contributions
+
+## ✨ Fonctionnalités
+
+### ✅ Actuellement disponibles
+- **Conjugaison complète** : 12 temps (présent, passé, futur, conditionnel, etc.)
+- **3 modes** : Affirmatif, négatif, interrogatif
+- **Liste des verbes** : Recherche et filtrage alphabétique
+- **Interface intuitive** : Optimisée pour mobile et desktop
+- **Données ouvertes** : Code source disponible sur GitHub
+
+### 🔄 En développement
+- Traducteur automatique Pular ↔ Français
+- Cours interactifs en ligne
+- API pour développeurs
+- Application mobile native
+
+## 🚀 Utilisation en ligne
+
+Accédez au conjugueur directement : [jang-conjugueur.netlify.app](https://jang-conjugueur.netlify.app)
+
+## 💻 Installation locale
+
+1. **Clonez le dépôt**
+   ```bash
+   git clone https://github.com/teek-tab/jang-conjugueur.git
+   cd jang-conjugueur
+   ```
+
+2. **Ouvrez dans votre navigateur**
+   - Ouvrez simplement le fichier `index.html` dans votre navigateur
+   - Aucune installation de serveur nécessaire (projet statique)
+
+3. **Ou utilisez Live Server (recommandé avec VSCode)**
+   - Installez l'extension "Live Server"
+   - Clic droit sur `index.html` → "Open with Live Server"
+
+## 📁 Structure du projet
+
+```
+jang-conjugueur/
+├── index.html              # Page d'accueil principale
+├── liste-verbes.html       # Liste interactive des verbes
+├── mentions-legales.html   # Mentions légales
+├── confidentialite.html    # Politique de confidentialité
+├── soutenir.html           # Page de soutien au projet
+├── styles.css              # Feuille de style principale
+├── verbes.js               # Base de données des verbes
+├── main.js                 # Logique principale de conjugaison
+├── footer.js               # Composant footer réutilisable
+├── Chapeau_berger_Peul.jpg # Image de bannière
+├── README.md               # Ce fichier
+├── LICENSE                 # Licence du projet
+└── CONTRIBUTING.md         # Guide de contribution (optionnel)
+```
+
+## 🛠️ Technologies utilisées
+
+- **Frontend** : HTML5, CSS3, JavaScript Vanilla (sans framework)
+- **Design** : CSS Grid, Flexbox, variables CSS
+- **Hébergement** : Netlify + GitHub Pages
+
+## 🤝 Comment contribuer ?
+
+### 1. Signaler une erreur
+- Utilisez le bouton "Signaler une erreur" sur le site
+- Ou ouvrez une [issue sur GitHub](https://github.com/teek-tab/jang-conjugueur/issues)
+
+### 2. Améliorer le code ou les données
+1. Forkez le projet
+2. Créez une branche (`git checkout -b feature/ma-fonctionnalite`)
+3. Commitez vos changements
+4. Poussez la branche et ouvrez une Pull Request
+
+Contributions bienvenues :
+- Corrections grammaticales et conjugaisons
+- Ajout de nouveaux verbes
+- Amélioration de l'interface
+- Documentation et exemples
+
+## 📊 Statistiques du projet
+
+| Métrique                  | Valeur          |
+|---------------------------|-----------------|
+| Verbes documentés         | 50+             |
+| Temps de conjugaison      | 12              |
+| Langues supportées        | 1 (Pular)       |
+| Taille du code            | ~500 lignes     |
+| Dernière mise à jour      | 2025-12-29      |
+
+## 🎓 À propos du développeur
+
+**Thierno Amadou Bah** – Étudiant en informatique passionné par le développement web, la préservation linguistique, l'open source et les langues africaines.
+
+📧 **Contact** : thiernoamadoubah.004@gmail.com  
+📱 **WhatsApp** : +221 70 511 30 94  
+🐙 **GitHub** : [@teek-tab](https://github.com/teek-tab)
+
+## 📜 Licence
+
+Ce projet est sous licence **GNU Affero General Public License v3.0 (AGPL-3.0)**.
+
+Cela signifie :
+- Vous pouvez utiliser, modifier, distribuer et même exploiter commercialement ce logiciel
+- Toute modification ou version dérivée doit être distribuée sous la même licence AGPL-3.0
+- Si vous hébergez une version modifiée en ligne et la rendez accessible au public, vous devez fournir le code source modifié aux utilisateurs
+
+Cette licence garantit que les améliorations (nouveaux verbes, corrections linguistiques, etc.) reviennent à la communauté.
+
+→ Voir le fichier [LICENSE](LICENSE) pour le texte complet de la licence.
+
+## 🌟 Soutenir le projet
+
+Ce projet est développé et maintenu bénévolement. Vous pouvez aider de plusieurs façons :
+
+### 💰 Soutien financier
+- **PDF Premium** : Guide complet de conjugaison (500 XOF)
+- **Cours particuliers** de Pular
+- **Correction de textes** en Pular
+
+### 🤲 Soutien non financier
+- Partagez le projet autour de vous
+- Contribuez au code ou aux données
+- Testez et signalez les bugs
+
+Plus d’infos sur la page [Soutenir](soutenir.html)
+
+## 🔗 Liens utiles
+
+- 🌐 **Site officiel** : [jang-conjugueur.netlify.app](https://jang-conjugueur.netlify.app)
+- 🐙 **Code source** : [github.com/teek-tab/jang-conjugueur](https://github.com/teek-tab/jang-conjugueur)
+- 📖 **Documentation** : [Wiki GitHub](https://github.com/teek-tab/jang-conjugueur/wiki)
+- 💬 **Contact** : thiernoamadoubah.004@gmail.com
+
+## 🙏 Remerciements
+
+Un grand merci :
+- Aux locuteurs natifs qui partagent généreusement leurs connaissances
+- À la communauté open source
+- Aux enseignants et linguistes qui documentent le Pular
+- À tous les contributeurs et testeurs
+
+
+**⭐ Si ce projet vous est utile, n’hésitez pas à lui donner une étoile sur GitHub !**
+
+
+**"Chaque verbe conjugué est un pas vers la préservation d’une langue."**

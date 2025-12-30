@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soutenir JANG - Conjugueur Pular</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .support-page {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    .page-title {
+      text-align: center;
+      color: white;
+      margin-bottom: 30px;
+    }
+    .page-title h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .page-title p {
+      font-size: 1.2rem;
+      color: #d9d7d7;
+    }
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+    .support-card {
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .support-card:hover {
+      transform: translateY(-5px);
+    }
+    .support-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .support-title {
+      color: #4a5568;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+    .support-price {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #71df3a;
+      margin: 20px 0;
+    }
+    .support-price small {
+      font-size: 1rem;
+      color: #718096;
+    }
+    .support-desc {
+      color: #4a5568;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+    .support-btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #4a5568;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    .support-btn:hover {
+      background: #2d3748;
+      transform: translateY(-2px);
+    }
+    .support-btn-primary {
+      background: #71df3a;
+    }
+    .support-btn-primary:hover {
+      background: #5ac02e;
+    }
+    .payment-methods {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .payment-method {
+      padding: 8px 15px;
+      background: #f7fafc;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      color: #4a5568;
+    }
+    .how-to-support {
+      background: #edf2f7;
+      padding: 30px;
+      border-radius: 16px;
+      margin-top: 40px;
+    }
+    .how-to-support h2 {
+      text-align: center;
+      color: #4a5568;
+      margin-bottom: 25px;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .step {
+      text-align: center;
+      padding: 20px;
+    }
+    .step-number {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: #4a5568;
+      color: white;
+      border-radius: 50%;
+      line-height: 40px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .faq {
+      margin-top: 50px;
+    }
+    .faq h2 {
+      text-align: center;
+      color: white;
+      margin-bottom: 30px;
+    }
+    .faq-item {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 15px;
+    }
+    .faq-question {
+      color: #4a5568;
+      font-weight: bold;
+      margin-bottom: 10px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-answer {
+      color: #718096;
+      display: none;
+    }
+    .back-home {
+      display: inline-block;
+      margin-bottom: 30px;
+      padding: 10px 20px;
+      background: #4a5568;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+    .back-home:hover {
+      background: #2d3748;
+      transform: translateY(-2px);
+    }
+    @media (max-width: 768px) {
+      .support-grid {
+        grid-template-columns: 1fr;
+      }
+      .page-title h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <a href="index.html" class="back-home">← Retour à l'accueil</a>
+    
+    <div class="support-page">
+      <div class="page-title">
+        <h1>❤️ Soutenir JANG</h1>
+        <p>Votre soutien permet de maintenir et améliorer ce projet étudiant dédié à la langue Pular</p>
+      </div>
+      
+      <div class="support-grid">
+        <!-- PDF Premium -->
+        <div class="support-card">
+          <div class="support-icon">📚</div>
+          <h3 class="support-title">Guide PDF Premium</h3>
+          <div class="support-price">
+            500 XOF <small>(~0,75€)</small>
+          </div>
+          <p class="support-desc">
+            Guide complet de conjugaison Pular avec tous les tableaux, exemples détaillés et fiches mémo.
+          </p>
+          <a href="mailto:thiernoamadoubah.004@gmail.com?subject=Achat%20PDF%20JANG&body=Bonjour%20Thierno,%0A%0AJe%20souhaite%20acheter%20le%20PDF%20premium%20de%20conjugaison%20Pular.%0A%0AMerci%20de%20m'indiquer%20les%20modalités%20de%20paiement."
+             class="support-btn">
+            Commander le PDF
+          </a>
+          <div class="payment-methods">
+            <span class="payment-method">Orange Money</span>
+            <span class="payment-method">Wave</span>
+            <span class="payment-method">Mobile Money</span>
+          </div>
+        </div>
+        
+        <!-- Cours particuliers -->
+        <div class="support-card">
+          <div class="support-icon">👨‍🏫</div>
+          <h3 class="support-title">Cours particulier</h3>
+          <div class="support-price">
+            3 000 XOF/heure <small>(~4,50€)</small>
+          </div>
+          <p class="support-desc">
+            Cours personnalisé de Pular par visio. Apprenez la conjugaison, la grammaire ou la conversation.
+          </p>
+          <a href="https://wa.me/221705113094?text=Bonjour%20Thierno%20!%20%F0%9F%91%8B%0A%0AJe%20suis%20intéressé(e)%20par%20un%20cours%20particulier%20de%20Pular."
+             target="_blank"
+             rel="noopener noreferrer"
+             class="support-btn">
+            Réserver un cours
+          </a>
+        </div>
+        
+        <!-- Correction de textes -->
+        <div class="support-card">
+          <div class="support-icon">✏️</div>
+          <h3 class="support-title">Correction de textes</h3>
+          <div class="support-price">
+            1 500 XOF/page <small>(~2,25€)</small>
+          </div>
+          <p class="support-desc">
+            Correction professionnelle de vos textes en Pular. Idéal pour étudiants, chercheurs ou professionnels.
+          </p>
+          <a href="mailto:thiernoamadoubah.004@gmail.com?subject=Correction%20texte%20Pular&body=Bonjour%20Thierno,%0A%0AJe%20souhaite%20une%20correction%20de%20texte%20en%20Pular.%0A%0ADétails%20:%20"
+             class="support-btn">
+            Demander une correction
+          </a>
+        </div>
+      </div>
+      
+      <div class="how-to-support">
+        <h2>Comment soutenir ce projet ?</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Choisissez</h3>
+            <p>Sélectionnez le type de support qui vous convient le mieux</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Contactez-moi</h3>
+            <p>Envoyez un email ou message WhatsApp avec votre demande</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Recevez</h3>
+            <p>Obtenez votre produit ou service dans les plus brefs délais</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq">
+        <h2>Questions fréquentes</h2>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            Quels sont les modes de paiement acceptés ?
+            <span>▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Pour l'Afrique : Orange Money, Wave, MTN Mobile Money, Free Money, Moov Money.<br>
+            Pour la diaspora : PayPal, virement bancaire, Western Union.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            Combien de temps pour recevoir le PDF ?
+            <span>▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Le PDF est envoyé dans les 24 heures suivant la confirmation de paiement.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            Puis-je avoir un reçu ou facture ?
+            <span>▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Oui, une facture ou reçu peut être fourni sur demande pour les services professionnels.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            Le site restera-t-il gratuit ?
+            <span>▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Absolument ! Le conjugueur en ligne restera toujours gratuit. Les services payants sont optionnels.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer-container"></footer>
+
+  <!-- Scripts -->
+  <script>
+    // FAQ toggle
+    function toggleFAQ(element) {
+      const answer = element.nextElementSibling;
+      const icon = element.querySelector('span');
+      
+      if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+        icon.textContent = '▼';
+      } else {
+        answer.style.display = 'block';
+        icon.textContent = '▲';
+      }
+    }
+    
+    // Ouvrir première FAQ
+    document.addEventListener('DOMContentLoaded', function() {
+      const firstFAQ = document.querySelector('.faq-question');
+      if (firstFAQ) {
+        toggleFAQ(firstFAQ);
+      }
+    });
+  </script>
+  <script src="footer.js"></script>
+</body>
+</html>

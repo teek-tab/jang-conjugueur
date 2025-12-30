@@ -67,7 +67,7 @@ jang-conjugueur/
 ├── Chapeau_berger_Peul.jpg # Image de bannière
 ├── README.md               # Ce fichier
 ├── LICENSE                 # Licence du projet
-└── CONTRIBUTING.md         # Guide de contribution (optionnel)
+└── CONTRIBUTING.md         # Guide de contribution
 ```
 
 ## 🛠️ Technologies utilisées
@@ -156,9 +156,14 @@ Un grand merci :
 - Aux enseignants et linguistes qui documentent le Pular
 - À tous les contributeurs et testeurs
 
+---
+
+<div align="center">
 
 **⭐ Si ce projet vous est utile, n’hésitez pas à lui donner une étoile sur GitHub !**
 
-
+<br>
 
 **"Chaque verbe conjugué est un pas vers la préservation d’une langue."**
+
+</div>

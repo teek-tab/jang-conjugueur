@@ -59,10 +59,10 @@ function getSuffix(type, temps, mode, verbeOrig) {
       passesimple: mode === "neg" ? "aaka" : "aa",
       imparfait: "eede",
       plusque: mode === "neg" ? "anooka" : "anooma",
-      futurproche: mode === "neg" ? "etaake" : "tete",
+      futurproche: mode === "neg" ? "etaake" : "ete",
       futursimple: mode === "neg" ? "oytaake" : "oyte",
       futurcont: "eede",
-      futurante: mode === "neg" ? "otoyaaka" : "otoyaama",
+      futurante: mode === "neg" ? "otoyaaka" : "oyaama",
       condpresent: mode === "neg" ? "etanooke" : "eteno",
       condforme1: mode === "neg" ? "oytanooke" : "oyteno"
     };
